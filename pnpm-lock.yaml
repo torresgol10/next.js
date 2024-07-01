@@ -870,7 +870,7 @@ importers:
         version: 1.54.0
       styled-jsx:
         specifier: 5.1.6
-        version: 5.1.6(@babel/core@7.22.5)(babel-plugin-macros@3.1.0)(react@19.0.0-rc-6230622a1a-20240610)
+        version: 5.1.6(@babel/core@7.22.5)(react@19.0.0-rc-6230622a1a-20240610)
     optionalDependencies:
       sharp:
         specifier: ^0.33.4
@@ -1089,9 +1089,6 @@ importers:
       '@types/shell-quote':
         specifier: 1.7.1
         version: 1.7.1
-      '@types/tar':
-        specifier: 6.1.5
-        version: 6.1.5
       '@types/text-table':
         specifier: 0.2.1
         version: 0.2.1
@@ -1423,8 +1420,8 @@ importers:
         specifier: 1.0.3
         version: 1.0.3
       tar:
-        specifier: 6.1.15
-        version: 6.1.15
+        specifier: 7.4.0
+        version: 7.4.0
       taskr:
         specifier: 1.1.0
         version: 1.1.0
@@ -4470,9 +4467,6 @@ packages:
 
   '@types/tar@6.1.13':
     resolution: {integrity: sha512-IznnlmU5f4WcGTh2ltRu/Ijpmk8wiWXfF0VA4s+HPjHZgvFggk1YaIkbo5krX/zUCzWF8N/l4+W/LNxnvAJ8nw==}
-
-  '@types/tar@6.1.5':
-    resolution: {integrity: sha512-qm2I/RlZij5RofuY7vohTpYNaYcrSQlN2MyjucQc7ZweDwaEWkdN/EeNh6e9zjK6uEm6PwjdMXkcj05BxZdX1Q==}
 
   '@types/text-table@0.2.1':
     resolution: {integrity: sha512-dchbFCWfVgUSWEvhOkXGS7zjm+K7jCUvGrQkAHPk2Fmslfofp4HQTH2pqnQ3Pw5GPYv0zWa2AQjKtsfZThuemQ==}
@@ -7779,6 +7773,7 @@ packages:
 
   glob@7.2.0:
     resolution: {integrity: sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   global-dirs@2.1.0:
     resolution: {integrity: sha512-MG6kdOUh/xBnyo9cJFeIKkLEc1AyFq42QTU4XiX51i2NEdxLxLWXIjEjmqKeSuKR7pAZjTqUVoT2b2huxVLgYQ==}
@@ -12269,6 +12264,7 @@ packages:
 
   rimraf@2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rimraf@2.7.1:
@@ -13134,6 +13130,10 @@ packages:
 
   tar@7.2.0:
     resolution: {integrity: sha512-hctwP0Nb4AB60bj8WQgRYaMOuJYRAPMGiQUAotms5igN8ppfQM+IvjQ5HcKu1MaZh2Wy2KWVTe563Yj8dfc14w==}
+    engines: {node: '>=18'}
+
+  tar@7.4.0:
+    resolution: {integrity: sha512-XQs0S8fuAkQWuqhDeCdMlJXDX80D7EOVLDPVFkna9yQfzS+PHKgfxcei0jf6/+QAWcjqrnC8uM3fSAnrQl+XYg==}
     engines: {node: '>=18'}
 
   taskr@1.1.0:
@@ -16116,7 +16116,7 @@ snapshots:
       micromatch: 4.0.5
       pretty-format: 29.7.0
       slash: 3.0.0
-      strip-ansi: 6.0.1
+      strip-ansi: 6.0.0
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -18134,11 +18134,6 @@ snapshots:
       '@types/node': 20.12.3
       minipass: 4.2.8
 
-  '@types/tar@6.1.5':
-    dependencies:
-      '@types/node': 20.12.3
-      minipass: 4.2.8
-
   '@types/text-table@0.2.1': {}
 
   '@types/through@0.0.30':
@@ -19672,7 +19667,7 @@ snapshots:
   cliui@7.0.4:
     dependencies:
       string-width: 4.2.3
-      strip-ansi: 6.0.1
+      strip-ansi: 6.0.0
       wrap-ansi: 7.0.0
 
   cliui@8.0.1:
@@ -22071,7 +22066,7 @@ snapshots:
   foreground-child@3.1.1:
     dependencies:
       cross-spawn: 7.0.3
-      signal-exit: 4.0.2
+      signal-exit: 4.1.0
 
   forever-agent@0.6.1: {}
 
@@ -22364,7 +22359,7 @@ snapshots:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
       minimatch: 9.0.3
-      minipass: 5.0.0
+      minipass: 7.1.2
       path-scurry: 1.10.1
 
   glob@7.1.6:
@@ -26341,7 +26336,7 @@ snapshots:
   path-scurry@1.10.1:
     dependencies:
       lru-cache: 10.0.0
-      minipass: 5.0.0
+      minipass: 7.1.2
 
   path-to-regexp@0.1.7: {}
 
@@ -28876,6 +28871,13 @@ snapshots:
       '@babel/core': 7.22.5
       babel-plugin-macros: 3.1.0
 
+  styled-jsx@5.1.6(@babel/core@7.22.5)(react@19.0.0-rc-6230622a1a-20240610):
+    dependencies:
+      client-only: 0.0.1
+      react: 19.0.0-rc-6230622a1a-20240610
+    optionalDependencies:
+      '@babel/core': 7.22.5
+
   stylehacks@4.0.3:
     dependencies:
       browserslist: 4.22.2
@@ -29041,6 +29043,15 @@ snapshots:
       yallist: 4.0.0
 
   tar@7.2.0:
+    dependencies:
+      '@isaacs/fs-minipass': 4.0.1
+      chownr: 3.0.0
+      minipass: 7.1.2
+      minizlib: 3.0.1
+      mkdirp: 3.0.1
+      yallist: 5.0.0
+
+  tar@7.4.0:
     dependencies:
       '@isaacs/fs-minipass': 4.0.1
       chownr: 3.0.0
@@ -30150,7 +30161,7 @@ snapshots:
     dependencies:
       ansi-styles: 4.3.0
       string-width: 4.2.3
-      strip-ansi: 6.0.1
+      strip-ansi: 6.0.0
 
   wrap-ansi@8.1.0:
     dependencies:
